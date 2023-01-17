@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
         task1();
@@ -37,31 +39,55 @@ public class Main {
     }
     public static void task4() {
         System.out.println("Задание 4");
-        int age = 30;
-        boolean kid = age >= 2 && age <= 6;
-        if (kid) {
+        int age = 20;
+        if (age >= 2 && age <= 6) {
             System.out.println("Если человеку " + age + ", то ему нужно ходить в детский сад.");
         }
-        boolean schoolboy  = age >= 7 && age <= 18;
-        if (schoolboy) {
+        if (age >= 7 && age <= 18) {
             System.out.println("Если человеку " + age + ", то ему нужно ходить в школу.");
         }
-        boolean student = age >= 18 && age <= 24;
-        if (student) {
+        if (age >= 18 && age <= 24) {
             System.out.println("Если человеку " + age + ", то его место в университете.");
         }
-        boolean worker = age >= 24;
-        if (worker) {
+        if (age >= 24) {
             System.out.println("Если человеку " + age + ", то ему пора ходить на работу.");
         }
     }
     public static void task5() {
         System.out.println("Задание 5");
+        int age = 15;
+        if (age <= 5) {
+            System.out.println("Если возраст ребенка равен " + age + " лет, то ему нельзя кататься на аттракционе.");
+        } else if (age < 14) {
+            System.out.println("Если возраст ребенка равен " + age + " лет, то ему можно кататься на аттракционе в сопровождении взрослого.");
+        } else if (age >= 14) {
+            System.out.println("Если возраст ребенка равен " + age + " лет, то ему можно кататься на аттракционе, без сопровождения взрослого.");
+        }
     }
     public static void task6() {
         System.out.println("Задание 6");
+        int passenger = 103;
+        if (passenger >= 1 && passenger <= 60) {
+            System.out.println("Есть сидячее место в вагоне.");
+        } else if (passenger > 60 && passenger <= 102) {
+            System.out.println("Есть стоячее место в вагоне.");
+        } else {
+            System.out.println("В вагоне нет мест.");
+        }
     }
     public static void task7() {
         System.out.println("Задание 7");
+        int one = 50;
+        int two = 50;
+        int three = 50;
+        if (one > two && one > three) {
+            System.out.println("Число " + one + " больше чем число " + two + " и " + three);
+        } else if (two > one && two > three) {
+            System.out.println("Число " + two + " больше чем число " + one + " и " + three);
+        } else if (three > one && three > two) {
+            System.out.println("Число " + three + " больше чем число " + one + " и " + two);
+        } else {
+            System.out.println("Все три числа равны");
+        }
     }
 }
